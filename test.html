@@ -1,0 +1,21 @@
+<html>
+<head>
+<script type="text/javascript" src="js/libs/jquery-2.1.1.js"></script>
+<script type="text/javascript" src="js/libs/json2.js"></script>
+<script type="text/javascript">
+
+
+function json(){
+var jsonObj = { id: '01', name: 'Tom' };
+alert(JSON.stringify(jsonObj));
+var jsonString = '{"id":"01","name":"Tom"}';
+var obj=JSON.parse(jsonString);
+$("button").text(obj.name)
+alert(obj.id);
+}
+</script>
+</head>
+<body>
+<button onclick="json();" value="hello world">改变值</button>
+</body>
+</html>
