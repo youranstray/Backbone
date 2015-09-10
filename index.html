@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Backbone & Requirejs Demo</title>
+    <script type="text/javascript" src="js/libs/require.js" data-main="js/apps/app"></script>
+    <!--<script src="js/libs/backbone.localStorage.js"></script>-->
+</head>
+<body>
+	<div id="bookapp">
+    	<header>
+            <h3>图书列表</h3>
+            <form>
+                书名：<input id="book-title" type="text" placeholder="想要添加的书名">
+                作者： <input id="book-author" type="text" placeholder="添加图书的作者">
+                <button id="submit">添加</button>
+                <button type="reset">重置</button>
+            </form>
+        </header>
+        <section id="main">
+        	<ul id="book-list"></ul>
+        </section>
+    </div>
+</body>
+</html>
