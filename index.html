@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<script src="js/jquery1.9-min.js"></script>
+	<script src="js/underscore.js"></script>
+	<script src="js/backbone.js"></script>
+	<!-- <script src="js/backbone.localStorage.js"></script> -->
+	<!-- <script src="js/main.js"></script> -->
+	<title>Document</title>
+	<script>
+		var AppRouter = Backbone.Router.extend({
+			routes: {
+				"*a": "getPost",
+				"*action": "defaultRoute"
+			},
+			getPost: function(path){
+				alert(path);
+				//alert(id);
+			},
+			defaultRoute: function(actions){
+				alert(actions);
+			}
+		});
+		var app_router = new AppRouter;
+		Backbone.history.start();
+	</script>
+</head>
+<body>
+	<a href="#/posts/120">Post 120</a>
+</body>
+</html>
